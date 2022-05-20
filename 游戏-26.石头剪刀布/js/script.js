@@ -2,17 +2,17 @@
 const choices = [
     {
         id: 1,
-        name: "石头",
+        name: "Rock",
         image: "./img/rock.png"
     },
     {
         id: 2,
-        name: "布",
+        name: "Paper",
         image: "./img/paper.png"
     },
     {
         id: 3,
-        name: "剪刀",
+        name: "Scissors",
         image: "./img/scissors.png"
     }]
 
@@ -32,13 +32,13 @@ let randomNumber;
 // EVENT LISTENERS
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        if (button.textContent === "石头") {
+        if (button.textContent === "Rock") {
             playerChoiceImg.src = choices[0].image;
             playerChoiceTxt.textContent = choices[0].name;
-        } else if (button.textContent === "布") {
+        } else if (button.textContent === "Paper") {
             playerChoiceImg.src = choices[1].image;
             playerChoiceTxt.textContent = choices[1].name;
-        } else if (button.textContent === "剪刀") {
+        } else if (button.textContent === "Scissors") {
             playerChoiceImg.src = choices[2].image;
             playerChoiceTxt.textContent = choices[2].name;
         }
@@ -78,10 +78,10 @@ function gameRules() {
 
 function whoWon() {
     if (points[0] === 10) {
-        alert("你干掉了AI成功取得胜利!")
+        alert("You have beaten the Artificial Intellegence. Good Job!")
         points = [0, 0];
     } else if (points[1] === 10) {
-        alert("你被人工智能打败了!")
+        alert("AI has beaten you. Try again?")
         points = [0, 0];
     }
 }
